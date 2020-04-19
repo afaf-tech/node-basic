@@ -11,8 +11,8 @@ var fs = require('fs');
 
 var server = http.createServer(function(req,res){
 	console.log('request was made : ' + req.url);
-	res.writeHead(200,{'Content-Type': 'text/plain'});
-	var myreadStream = fs.createReadStream(__dirname + '/readme.txt','utf8');
+	res.writeHead(200,{'Content-Type': 'text/html'});
+	var myreadStream = fs.createReadStream(__dirname + '/index.html','utf8');
 	// var mywriteStream = fs.createWriteStream(__dirname + '/writeMe.txt');
 	myreadStream.pipe(res);
 
