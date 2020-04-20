@@ -2,9 +2,12 @@ var express = require('express');
 
 var app = express();
 
+app.set('view engine','ejs');
+
 
 app.get('/', function(req,res){
-	res.send('this is the homepage')
+	// send Templating file
+	res.sendFile(__dirname + '/index.html')
 })
 
 app.get('/contact', function(req,res){
@@ -12,7 +15,8 @@ app.get('/contact', function(req,res){
 })
 
 app.get('/profile/:id', function(req,res){
-	res.send(req.params)
+	var data = {age:29, jobs: 'ninja'}
+	res.render('template',{person:req.params.id, data: data})
 })
 
 app.get('/users/:userId/books/:bookId', function (req, res) {
