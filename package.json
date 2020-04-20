@@ -1,0 +1,23 @@
+{
+  "name": "ninjanode12-22",
+  "version": "1.0.0",
+  "description": "a little test node app",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.13.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/afaf-tech/node-basic.git"
+  },
+  "author": "afaf-tech",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/afaf-tech/node-basic/issues"
+  },
+  "homepage": "https://github.com/afaf-tech/node-basic#readme"
+}
