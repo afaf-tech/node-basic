@@ -14,9 +14,9 @@ app.get('/contact', function(req,res){
 	res.send('this is the contact page')
 })
 
-app.get('/profile/:id', function(req,res){
-	var data = {age:29, jobs: 'ninja'}
-	res.render('template',{person:req.params.id, data: data})
+app.get('/profile/:name', function(req,res){
+	var data = {age:29, jobs: 'ninja', hobbies:['sepak bola', 'voly', 'mancing','menjaring']}
+	res.render('template',{person:req.params.name, data: data})
 })
 
 app.get('/users/:userId/books/:bookId', function (req, res) {
