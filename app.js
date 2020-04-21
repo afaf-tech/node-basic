@@ -7,14 +7,14 @@ app.set('view engine','ejs');
 
 app.get('/', function(req,res){
 	// send Templating file
-	res.sendFile(__dirname + '/index.html')
+	res.render('index')
 })
 
 app.get('/contact', function(req,res){
-	res.send('this is the contact page')
+	res.render('contact')
 })
-
-app.get('/profile/:name', function(req,res){
+ 
+app.get('/profile /:name', function(req,res){
 	var data = {age:29, jobs: 'ninja', hobbies:['sepak bola', 'voly', 'mancing','menjaring']}
 	res.render('template',{person:req.params.name, data: data})
 })
